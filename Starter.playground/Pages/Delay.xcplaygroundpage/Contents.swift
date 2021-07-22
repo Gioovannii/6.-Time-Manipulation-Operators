@@ -5,6 +5,10 @@ import PlaygroundSupport
 let valuesPerSeconds = 1.0
 let delayInSeconds = 1.5
 
+// 1
+let sourcePublisher = PassthroughSubject<Date, Never>()
+
+
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
