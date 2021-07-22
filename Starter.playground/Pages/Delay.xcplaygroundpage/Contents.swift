@@ -8,6 +8,8 @@ let delayInSeconds = 1.5
 // 1
 let sourcePublisher = PassthroughSubject<Date, Never>()
 
+// 2
+let delayedPublisher = sourcePublisher.delay(for: .seconds(delayInSeconds), scheduler: DispatchQueue.main)
 
 //: [Next](@next)
 /*:
