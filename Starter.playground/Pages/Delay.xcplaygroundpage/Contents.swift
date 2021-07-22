@@ -30,6 +30,8 @@ let view = VStack(spacing: 50) {
 }
 
 
+// 7
+PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
 
 
 //: [Next](@next)
