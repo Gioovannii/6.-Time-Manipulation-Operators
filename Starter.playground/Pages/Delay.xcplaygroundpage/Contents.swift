@@ -5,13 +5,13 @@ import PlaygroundSupport
 let valuesPerSeconds = 1.0
 let delayInSeconds = 1.5
 
-// 1
+// 1 Set source publisher sample subject
 let sourcePublisher = PassthroughSubject<Date, Never>()
 
-// 2
+// 2 This wll delay emitted values on main scheduler
 let delayedPublisher = sourcePublisher.delay(for: .seconds(delayInSeconds), scheduler: DispatchQueue.main)
 
-// 3
+// 3 Create time that delivers one value per seconds. Start with autoConnect
 let subscription = Timer
     .publish(every: 1.0 / valuesPerSeconds, on: .main, in: .common)
     .autoconnect()
