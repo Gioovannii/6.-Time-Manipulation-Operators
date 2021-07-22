@@ -11,6 +11,11 @@ let sourcePublisher = PassthroughSubject<Date, Never>()
 // 2
 let delayedPublisher = sourcePublisher.delay(for: .seconds(delayInSeconds), scheduler: DispatchQueue.main)
 
+// 3
+let subscription = Timer
+    .publish(every: 1.0 / valuesPerSeconds, on: .main, in: .common)
+    .autoconnect()
+    .subscribe(sourcePublisher)
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
