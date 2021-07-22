@@ -2,7 +2,8 @@ import Combine
 import SwiftUI
 import PlaygroundSupport
 
-
+let valuesPerSeconds = 1.0
+let delayInSeconds = 1.5
 
 //: [Next](@next)
 /*:
