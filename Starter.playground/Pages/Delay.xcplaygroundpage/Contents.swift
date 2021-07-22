@@ -16,6 +16,22 @@ let subscription = Timer
     .publish(every: 1.0 / valuesPerSeconds, on: .main, in: .common)
     .autoconnect()
     .subscribe(sourcePublisher)
+
+// 4
+let sourceTimeline = TimelineView(title: "Emitted values (\(valuesPerSeconds) per sec.):")
+
+// 5
+let delayedTimeline = TimelineView(title: "Delayed values (with a \(delayInSeconds)s delay):")
+
+// 6
+let view = VStack(spacing: 50) {
+    sourceTimeline
+    delayedTimeline
+}
+
+
+
+
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
