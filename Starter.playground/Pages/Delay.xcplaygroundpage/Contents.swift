@@ -17,20 +17,20 @@ let subscription = Timer
     .autoconnect()
     .subscribe(sourcePublisher)
 
-// 4
+// 4 Create timeline view display values emmited by the timer
 let sourceTimeline = TimelineView(title: "Emitted values (\(valuesPerSeconds) per sec.):")
 
-// 5
+// 5 Create another timeline viewto diplay delayed values
 let delayedTimeline = TimelineView(title: "Delayed values (with a \(delayInSeconds)s delay):")
 
-// 6
+// 6 create simple SwiftUI vertical stackto displayboth timeline
 let view = VStack(spacing: 50) {
     sourceTimeline
     delayedTimeline
 }
 
 
-// 7
+// 7 Set up live view for this playground
 PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
 
 
