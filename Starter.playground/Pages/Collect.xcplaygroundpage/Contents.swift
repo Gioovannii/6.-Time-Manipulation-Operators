@@ -5,10 +5,10 @@ import PlaygroundSupport
 let valuesPerSeconds = 1.0
 let collectTimeStride = 4
 
-// 1
+// 1 setup source publisher
 let sourcePublisher = PassthroughSubject<Date, Never>()
 
-// 2
+// 2 
 let collectPublisher = sourcePublisher
 
     .collect(.byTime(DispatchQueue.main, .seconds(collectTimeStride)))
