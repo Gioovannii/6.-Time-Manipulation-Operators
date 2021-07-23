@@ -2,7 +2,10 @@ import Combine
 import SwiftUI
 import PlaygroundSupport
 
-<# Add your code here #>
+let valuesPerSeconds = 1.0
+let collectTimeStride = 4
+
+
 
 //: [Next](@next)
 /*:
