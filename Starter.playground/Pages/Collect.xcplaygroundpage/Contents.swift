@@ -5,7 +5,13 @@ import PlaygroundSupport
 let valuesPerSeconds = 1.0
 let collectTimeStride = 4
 
+// 1
+let sourcePublisher = PassthroughSubject<Date, Never>()
 
+// 2
+let collectPublisher = sourcePublisher
+
+    .collect(.byTime(DispatchQueue.main, .seconds(collectTimeStride)))
 
 //: [Next](@next)
 /*:
