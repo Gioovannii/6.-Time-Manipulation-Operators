@@ -33,7 +33,8 @@ let view = VStack(spacing: 50) {
 // 7 Set up live view for this playground
 PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
 
-
+sourcePublisher.displayEvents(in: sourceTimeline)
+delayedPublisher.displayEvents(in: delayedTimeline)
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
