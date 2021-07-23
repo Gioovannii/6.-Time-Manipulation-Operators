@@ -5,6 +5,8 @@ import PlaygroundSupport
 let valuesPerSeconds = 1.0
 let collectTimeStride = 4
 
+
+
 // 1 setup source publisher
 let sourcePublisher = PassthroughSubject<Date, Never>()
 
@@ -15,6 +17,11 @@ let collectPublisher = sourcePublisher
     .flatMap { dates in
         dates.publisher
     }
+
+let subscription = Timer
+    .publish(every: 1.0 / valuesPerSeconds, on: .main, in: .common)
+    .autoconnect()
+    .subscribe(sourcePublisher)
 
 //: [Next](@next)
 /*:
