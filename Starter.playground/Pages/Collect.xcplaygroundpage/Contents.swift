@@ -8,7 +8,7 @@ let collectTimeStride = 4
 // 1 setup source publisher
 let sourcePublisher = PassthroughSubject<Date, Never>()
 
-// 2 
+// 2 Create a collectedPublisher which collect values emitted during strides
 let collectPublisher = sourcePublisher
 
     .collect(.byTime(DispatchQueue.main, .seconds(collectTimeStride)))
