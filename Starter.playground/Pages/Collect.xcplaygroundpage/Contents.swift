@@ -12,6 +12,9 @@ let sourcePublisher = PassthroughSubject<Date, Never>()
 let collectPublisher = sourcePublisher
 
     .collect(.byTime(DispatchQueue.main, .seconds(collectTimeStride)))
+    .flatMap { dates in
+        dates.publisher
+    }
 
 //: [Next](@next)
 /*:
