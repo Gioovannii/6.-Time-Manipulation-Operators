@@ -23,6 +23,11 @@ let subscription = Timer
     .autoconnect()
     .subscribe(sourcePublisher)
 
+let sourceTimeline = TimelineView(title: "Emitted values:")
+let collectedTimeline = TimelineView(title: "Collected values (every \(collectTimeStride)s):")
+
+
+
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
