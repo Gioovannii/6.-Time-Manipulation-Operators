@@ -38,6 +38,11 @@ collectPublisher.displayEvents(in: collectedTimeline)
 
 
 let collectMaxCount = 2
+
+let colectedPublisher2 = sourcePublisher
+
+   
+
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
