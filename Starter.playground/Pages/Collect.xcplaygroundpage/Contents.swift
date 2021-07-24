@@ -42,7 +42,9 @@ let collectMaxCount = 2
 let colectedPublisher2 = sourcePublisher
 
     .collect(.byTimeOrCount(DispatchQueue.main, .seconds(collectTimeStride), collectMaxCount))
-   
+    .flatMap { dates in
+        dates.publisher
+    }
 
 //: [Next](@next)
 /*:
