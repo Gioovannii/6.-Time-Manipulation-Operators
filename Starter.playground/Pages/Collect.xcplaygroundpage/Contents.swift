@@ -36,6 +36,8 @@ PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width
 sourcePublisher.displayEvents(in: sourceTimeline)
 collectPublisher.displayEvents(in: collectedTimeline)
 
+
+let collectMaxCount = 2
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
