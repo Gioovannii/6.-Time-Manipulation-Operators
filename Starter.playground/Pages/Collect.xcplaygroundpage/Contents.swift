@@ -12,7 +12,7 @@ let sourcePublisher = PassthroughSubject<Date, Never>()
 
 // 2 Create a collectedPublisher which collect values emitted during strides
 let collectPublisher = sourcePublisher
-
+    
     .collect(.byTime(DispatchQueue.main, .seconds(collectTimeStride)))
     .flatMap { dates in
         dates.publisher
@@ -40,7 +40,7 @@ collectPublisher.displayEvents(in: collectedTimeline)
 let collectMaxCount = 2
 
 let colectedPublisher2 = sourcePublisher
-
+    
     .collect(.byTimeOrCount(DispatchQueue.main, .seconds(collectTimeStride), collectMaxCount))
     .flatMap { dates in
         dates.publisher
