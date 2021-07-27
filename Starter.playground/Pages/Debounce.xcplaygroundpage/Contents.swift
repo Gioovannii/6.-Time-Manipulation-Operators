@@ -13,6 +13,13 @@ let debounced = subject
     // 3 share to create a single subscription point to debounce that show the same results.
     .share()
 
+let subjectTimeline = TimelineView(title: "Emitted values")
+let debouncedTimeline = TimelineView(title: "Debounced values")
+
+let view = VStack(spacing: 100) {
+    subjectTimeline
+    debouncedTimeline
+}
 
 
 
