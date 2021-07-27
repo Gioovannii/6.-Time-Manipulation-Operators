@@ -36,6 +36,8 @@ let subscription = Timer
 let sourceTimeline = TimelineView(title: "Emitted values:")
 let collectedTimeline = TimelineView(title: "Collected values (every \(collectTimeStride)s):")
 
+let collectTimeline2 = TimelineView(title: "Collected values (at most \(collectMaxCount) every \(collectTimeStride)s):")
+
 let view = VStack(spacing: 40) {
     sourceTimeline
     collectedTimeline
