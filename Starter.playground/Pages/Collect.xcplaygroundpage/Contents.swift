@@ -44,21 +44,12 @@ let view = VStack(spacing: 40) {
     collectTimeline2
 }
 
+
 PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
 
 sourcePublisher.displayEvents(in: sourceTimeline)
 collectPublisher.displayEvents(in: collectedTimeline)
-
-
-let collectMaxCount = 2
-
-let colectedPublisher2 = sourcePublisher
-    
-    .collect(.byTimeOrCount(DispatchQueue.main, .seconds(collectTimeStride), collectMaxCount))
-    .flatMap { dates in
-        dates.publisher
-    }
-
+collectedPublisher2.displayEvents(in: collectTimeline2)
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
