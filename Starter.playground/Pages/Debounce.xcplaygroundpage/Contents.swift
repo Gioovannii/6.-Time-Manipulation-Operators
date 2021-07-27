@@ -37,6 +37,7 @@ let subscription2 = debounced
         print("+\(deltaTime)s: Debounced emitted: \(string)")
     }
 
+subject.feed(with: typingHelloWorld)
 
 
 //: [Next](@next)
