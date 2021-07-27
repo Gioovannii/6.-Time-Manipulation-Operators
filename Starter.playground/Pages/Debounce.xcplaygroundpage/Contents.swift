@@ -2,13 +2,21 @@ import Combine
 import SwiftUI
 import PlaygroundSupport
 
-// 1
+// 1  Create source publisher
 let subject = PassthroughSubject<String, Never>()
 
-// 2
+// 2 Use debounce to wait 1 second
+// then it will send the last value sent uring that one second
+// This allow a max of one value per sec to be sent
 let debounced = subject
     .debounce(for: .seconds(1.0), scheduler: DispatchQueue.main)
+    // 3 share to create a single subscription point to debounce that show the same results.
     .share()
+
+
+
+
+
 
 //: [Next](@next)
 /*:
