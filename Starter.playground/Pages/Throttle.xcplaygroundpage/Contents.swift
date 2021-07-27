@@ -7,6 +7,9 @@ let throttleDelay = 1.0
 // 1
 let subject = PassthroughSubject<String, Never>()
 
+// 2
+let throttled = subject
+    .throttle(for: .seconds(throttleDelay), scheduler: DispatchQueue.main, latest: false)
 
 
 
