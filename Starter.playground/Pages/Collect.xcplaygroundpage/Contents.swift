@@ -41,6 +41,7 @@ let collectTimeline2 = TimelineView(title: "Collected values (at most \(collectM
 let view = VStack(spacing: 40) {
     sourceTimeline
     collectedTimeline
+    collectTimeline2
 }
 
 PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
