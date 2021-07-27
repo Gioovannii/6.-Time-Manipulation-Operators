@@ -2,7 +2,13 @@ import Combine
 import SwiftUI
 import PlaygroundSupport
 
-<# Add your code here #>
+// 1
+let subject = PassthroughSubject<String, Never>()
+
+// 2
+let debounced = subject
+    .debounce(for: .seconds(1.0), scheduler: DispatchQueue.main)
+    .share()
 
 //: [Next](@next)
 /*:
