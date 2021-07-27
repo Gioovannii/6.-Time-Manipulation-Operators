@@ -10,7 +10,8 @@ let subject = PassthroughSubject<String, Never>()
 // 2
 let throttled = subject
     .throttle(for: .seconds(throttleDelay), scheduler: DispatchQueue.main, latest: false)
-
+    // 3
+        .share()
 
 
 //: [Next](@next)
