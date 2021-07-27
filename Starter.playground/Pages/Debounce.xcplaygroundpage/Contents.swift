@@ -27,6 +27,12 @@ PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width
 subject.displayEvents(in: subjectTimeline)
 debounced.displayEvents(in: debouncedTimeline)
 
+let subscription1 = subject
+    .sink { string in
+        print("+\(deltaTime)s: Subject emitted: \(string)")
+    }
+
+
 
 
 //: [Next](@next)
