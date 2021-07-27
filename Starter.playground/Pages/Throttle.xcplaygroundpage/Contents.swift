@@ -4,6 +4,10 @@ import PlaygroundSupport
 
 let throttleDelay = 1.0
 
+// 1
+let subject = PassthroughSubject<String, Never>()
+
+
 
 
 //: [Next](@next)
