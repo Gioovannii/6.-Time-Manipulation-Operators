@@ -17,6 +17,17 @@ let collectPublisher = sourcePublisher
         dates.publisher
     }
 
+let collectedPublisher2 = sourcePublisher
+    
+    .collect(.byTimeOrCount(DispatchQueue.main,
+                            
+    .seconds(collectTimeStride),
+    
+    collectMaxCount))
+    .flatMap { dates in
+        dates.publisher
+    }
+
 let subscription = Timer
     .publish(every: 1.0 / valuesPerSeconds, on: .main, in: .common)
     .autoconnect()
