@@ -4,14 +4,15 @@ import PlaygroundSupport
 
 let throttleDelay = 1.0
 
-// 1
+// 1 Source publisher will emit string
 let subject = PassthroughSubject<String, Never>()
 
-// 2
+// 2 throttle subject will emit first value from subject during each one second interval
 let throttled = subject
     .throttle(for: .seconds(throttleDelay), scheduler: DispatchQueue.main, latest: false)
-    // 3
+    // 3 guarantees that all subscriber see the same output at the same time
         .share()
+
 
 
 //: [Next](@next)
