@@ -32,6 +32,10 @@ let subscription1 = subject
         print("+\(deltaTime)s: Subject emitted: \(string)")
     }
 
+let subscription2 = debounced
+    .sink { string in
+        print("+\(deltaTime)s: Debounced emitted: \(string)")
+    }
 
 
 
