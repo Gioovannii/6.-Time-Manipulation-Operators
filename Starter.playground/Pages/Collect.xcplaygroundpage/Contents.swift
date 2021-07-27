@@ -4,8 +4,7 @@ import PlaygroundSupport
 
 let valuesPerSeconds = 1.0
 let collectTimeStride = 4
-
-
+let collectMaxCount = 2
 
 // 1 setup source publisher
 let sourcePublisher = PassthroughSubject<Date, Never>()
