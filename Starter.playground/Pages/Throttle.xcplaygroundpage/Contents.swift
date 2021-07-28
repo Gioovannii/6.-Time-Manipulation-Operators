@@ -26,6 +26,16 @@ PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width
 subject.displayEvents(in: subjectTimeline)
 throttled.displayEvents(in: throttledTimeline)
 
+let subscription1 = subject
+    .sink { string in
+        print("+\(deltaTime)s: Subject emitted: \(string)")
+    }
+
+let subscription2 = throttled
+    .sink { string in
+        print("+\(deltaTime)s: Throttled emitted: \(string)")
+    }
+
 
 
 //: [Next](@next)
