@@ -14,6 +14,8 @@ let throttled = subject
     .share()
 
 let subjectTimeline = TimelineView(title: "Emitted values")
+let throttledTimeline = TimelineView(title: "Throttled values")
+
 
 //: [Next](@next)
 /*:
