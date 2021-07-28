@@ -11,9 +11,9 @@ let subject = PassthroughSubject<String, Never>()
 let throttled = subject
     .throttle(for: .seconds(throttleDelay), scheduler: DispatchQueue.main, latest: true)
     // 3 guarantees that all subscriber see the same output at the same time
-        .share()
+    .share()
 
-
+let subjectTimeline = TimelineView(title: "Emitted values")
 
 //: [Next](@next)
 /*:
