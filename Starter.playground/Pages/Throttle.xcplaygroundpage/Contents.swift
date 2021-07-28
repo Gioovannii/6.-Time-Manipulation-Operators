@@ -16,6 +16,11 @@ let throttled = subject
 let subjectTimeline = TimelineView(title: "Emitted values")
 let throttledTimeline = TimelineView(title: "Throttled values")
 
+let view = VStack(spacing: 100) {
+    subjectTimeline
+    throttledTimeline
+}
+
 
 //: [Next](@next)
 /*:
