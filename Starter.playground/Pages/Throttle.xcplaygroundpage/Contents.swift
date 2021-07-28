@@ -36,7 +36,7 @@ let subscription2 = throttled
         print("+\(deltaTime)s: Throttled emitted: \(string)")
     }
 
-
+subject.feed(with: typingHelloWorld)
 
 //: [Next](@next)
 /*:
