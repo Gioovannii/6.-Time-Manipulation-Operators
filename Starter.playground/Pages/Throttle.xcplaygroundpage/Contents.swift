@@ -21,6 +21,8 @@ let view = VStack(spacing: 100) {
     throttledTimeline
 }
 
+PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
+
 
 //: [Next](@next)
 /*:
