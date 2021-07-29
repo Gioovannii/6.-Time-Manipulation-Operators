@@ -2,7 +2,9 @@ import Combine
 import SwiftUI
 import PlaygroundSupport
 
-<# Add your code here #>
+enum TimeoutError: Error {
+    case timeout
+}
 
 //: [Next](@next)
 /*:
