@@ -13,6 +13,15 @@ let timeoutsubject = subject.timeout(.seconds(5), scheduler: DispatchQueue.main,
 
 let timeline = TimelineView(title: "Button taps")
 
+let view = VStack(spacing: 100) {
+    // 1
+    Button(action: { subject.send()
+        
+    }) {
+        Text("Press me within 5 seconds")
+    }
+    timeline
+}
 
 
 //: [Next](@next)
