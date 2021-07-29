@@ -7,6 +7,9 @@ let subject = PassthroughSubject<String, Never>()
 // 1
 let measureSubject = subject.measureInterval(using: DispatchQueue.main)
 
+let subjectTimeline = TimelineView(title: "Emitted values")
+let measureTimeline = TimelineView(title: "Measured values")
+
 
 /*:
  Copyright (c) 2020 Razeware LLC
