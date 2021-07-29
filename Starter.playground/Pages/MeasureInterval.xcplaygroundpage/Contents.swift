@@ -10,6 +10,12 @@ let measureSubject = subject.measureInterval(using: DispatchQueue.main)
 let subjectTimeline = TimelineView(title: "Emitted values")
 let measureTimeline = TimelineView(title: "Measured values")
 
+let view = VStack(spacing: 100) {
+    subjectTimeline
+    measureTimeline
+}
+
+
 
 /*:
  Copyright (c) 2020 Razeware LLC
