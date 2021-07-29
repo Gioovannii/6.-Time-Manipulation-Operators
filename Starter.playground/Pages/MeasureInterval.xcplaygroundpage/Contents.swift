@@ -2,7 +2,8 @@ import Combine
 import SwiftUI
 import PlaygroundSupport
 
-<# Add your code here #>
+let subject = PassthroughSubject<String, Never>()
+
 
 /*:
  Copyright (c) 2020 Razeware LLC
