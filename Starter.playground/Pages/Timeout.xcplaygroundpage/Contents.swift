@@ -24,6 +24,10 @@ let view = VStack(spacing: 100) {
 }
 
 
+PlaygroundPage.current.liveView = UIHostingController(rootView: view.frame(width: 375, height: 600))
+
+
+timeoutsubject.displayEvents(in: timeline)
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
