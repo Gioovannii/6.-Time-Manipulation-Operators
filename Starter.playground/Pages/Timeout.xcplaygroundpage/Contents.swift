@@ -8,6 +8,12 @@ enum TimeoutError: Error {
 
 let subject = PassthroughSubject<Void, TimeoutError>()
 
+// 1 timeout publisher will time out after 5 seconds without upstream publisher
+let timeoutsubject = subject.timeout(.seconds(5), scheduler: DispatchQueue.main, customError: { .timeout })
+
+let timeline = TimelineView(title: "Button taps")
+
+
 
 //: [Next](@next)
 /*:
