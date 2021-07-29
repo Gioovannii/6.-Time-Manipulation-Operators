@@ -6,6 +6,9 @@ enum TimeoutError: Error {
     case timeout
 }
 
+let subject = PassthroughSubject<Void, TimeoutError>()
+
+
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
