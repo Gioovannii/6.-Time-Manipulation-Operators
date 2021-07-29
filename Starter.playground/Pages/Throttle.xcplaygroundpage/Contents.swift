@@ -38,6 +38,11 @@ let subscription2 = throttled
 
 subject.feed(with: typingHelloWorld)
 
+
+
+/// Debounce wait for a pase in values it receive then emits the lastest one after specific interval
+/// Throttle wait for specific interval then emit first or latest of the values
+/// No pause 
 //: [Next](@next)
 /*:
  Copyright (c) 2020 Razeware LLC
