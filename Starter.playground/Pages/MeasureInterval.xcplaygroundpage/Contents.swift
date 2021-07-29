@@ -4,6 +4,9 @@ import PlaygroundSupport
 
 let subject = PassthroughSubject<String, Never>()
 
+// 1
+let measureSubject = subject.measureInterval(using: DispatchQueue.main)
+
 
 /*:
  Copyright (c) 2020 Razeware LLC
