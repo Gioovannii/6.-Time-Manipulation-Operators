@@ -27,6 +27,7 @@ let subscription1 = subject.sink { print("+\(deltaTime)s: Subject emitted \($0)"
 let subscription2 = measureSubject.sink {
     print("+\(deltaTime)s: Measure emitted: \($0)")
 }
+subject.feed(with: typingHelloWorld)
 
 /*:
  Copyright (c) 2020 Razeware LLC
